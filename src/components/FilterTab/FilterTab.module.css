@@ -1,0 +1,38 @@
+.filterTab {
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 0;
+}
+
+.tabHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.75rem 0;
+}
+
+.tabHeader h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.icon {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.options {
+  padding-left: 0.5rem;
+  padding-top: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}

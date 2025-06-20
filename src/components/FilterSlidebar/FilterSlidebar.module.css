@@ -1,0 +1,23 @@
+.sidebar {
+  width: 240px;
+  padding: 1rem;
+  border-right: 1px solid #eee;
+  background-color: #f9f9f9;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.heading {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Responsive: hide sidebar on smaller screens if not toggled */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+}

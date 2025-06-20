@@ -1,0 +1,37 @@
+.pageLayout {
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.gridLayout {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+
+.gridLayout > :first-child {
+  flex: 0 0 240px;
+}
+
+
+.gridLayout > :last-child {
+  flex: 1; 
+}
+
+
+@media (max-width: 768px) {
+  .gridLayout {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .gridLayout > :first-child {
+    width: 100%;
+    flex: none;
+  }
+
+  .gridLayout > :last-child {
+    width: 100%;
+  }
+}

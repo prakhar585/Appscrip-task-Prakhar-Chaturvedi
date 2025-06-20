@@ -1,0 +1,33 @@
+.card {
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+.card:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
+}
