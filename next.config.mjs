@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'export',  // Add this for static export
-  trailingSlash: true,
+  // Remove: output: 'export',
+  // Remove: trailingSlash: true,
   images: {
-    unoptimized: true,  // Required for static export
+    unoptimized: true, // Keep this for Netlify
   },
   async redirects() {
     return [

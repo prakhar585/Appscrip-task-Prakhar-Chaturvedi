@@ -10,17 +10,16 @@ import Hero from "@/components/Hero/Hero";
 import Footer from "@/components/Footer/Footer";
 import TopStrip from "@/components/topStrip/TopStrip";
 
-export async function getServerSideProps(context) {
-  const { category, sort } = context.query;
-
-  const products = await fetchProducts({ category, sort });
+export async function getStaticProps() {
+  const products = await fetchProducts({});
 
   return {
     props: {
       products,
-      selectedCategory: category || "",
-      selectedSort: sort || "",
+      selectedCategory: "",
+      selectedSort: "",
     },
+    revalidate: 3600, // Regenerate every hour
   };
 }
 
