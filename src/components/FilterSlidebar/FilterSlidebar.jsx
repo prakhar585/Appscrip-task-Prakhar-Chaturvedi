@@ -5,11 +5,12 @@ import FilterTab from '../FilterTab/FilerTab';
 const FilterSidebar = ({ selectedCategory }) => {
   return (
     <aside className={styles.sidebar}>
-      <h2 className={styles.heading}>Filters</h2>
-
+      <div className={styles.checkbox}>
+     <input type="checkbox" /> <h5>CUSTOMIZABLE</h5>
+      </div>
       <FilterTab
-        title="Category"
-        options={['Shoes', 'T-Shirts', 'Jeans', 'Hoodies']}
+        title="IDEAL FOR"
+        options={['All', 'Men', 'Women', 'Baby & kids']}
       />
 
       <FilterTab

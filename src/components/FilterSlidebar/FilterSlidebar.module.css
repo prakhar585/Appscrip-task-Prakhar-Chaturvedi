@@ -1,15 +1,22 @@
 .sidebar {
   width: 240px;
-  padding: 1rem;
-  border-right: 1px solid #eee;
-  background-color: #f9f9f9;
+  padding: 0.5rem;
+  border-right: 1px solid #E5E5E5;
+  /* background-color: #f9f9f9; */
   height: 100%;
   overflow-y: auto;
 }
 
+.checkbox{
+  display: flex;
+}
+
+.checkbox h5{
+  margin-left:  10px;
+}
 .heading {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 

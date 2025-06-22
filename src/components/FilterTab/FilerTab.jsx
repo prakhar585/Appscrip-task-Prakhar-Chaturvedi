@@ -10,7 +10,7 @@ const FilterTab = ({ title, options = [] }) => {
     <div className={styles.filterTab}>
       <div className={styles.tabHeader} onClick={toggleOpen}>
         <h3>{title}</h3>
-        <span className={styles.icon}>{isOpen ? '^' : 'v'}</span>
+        <span className={styles.icon}>{isOpen ? '<' : '>'}</span>
       </div>
 
       {isOpen && (

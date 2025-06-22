@@ -9,6 +9,7 @@ import Profile from "../../../public/assets/images/Profile.png";
 
 const Header = () => {
   return (
+    <>
     <header className={styles.header}>
       {/* Left Section */}
       <div className={styles.left}>
@@ -31,11 +32,11 @@ const Header = () => {
         <span className={styles.icon}>
           <Image src={Shopping} alt="Shopping" width={24} height={24} />
         </span>
-        <span className={styles.icon}>
+        <span id={styles.profile} className={styles.icon}>
           <Image src={Profile} alt="Profile" width={24} height={24} />
         </span>
         <span>
-          <select className={styles.langSelect}>
+          <select  className={styles.langSelect}>
             <option>EN</option>
             <option>FR</option>
             <option>ES</option>
@@ -44,6 +45,15 @@ const Header = () => {
         </span>
       </div>
     </header>
+      <div className={styles.navBar}>
+        <button className={styles.navBtn}>SHOP</button>
+        <button className={styles.navBtn}>SKILLS</button>
+        <button className={styles.navBtn}>STORIES</button>
+        <button className={styles.navBtn}>ABOUT</button>
+        <button className={styles.navBtn}>CONTACT US</button>
+      </div>
+      <hr className={styles.divider} />
+    </>
   );
 };
 

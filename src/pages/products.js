@@ -1,16 +1,16 @@
-
 import Head from "next/head";
-import styles from '../styles/ProductsPage.module.css';
+import styles from "../styles/ProductsPage.module.css";
 import { fetchProducts } from "../lib/fetchProducts";
 import ProductGrid from "@/components/ProductGrid/ProductGrid";
 import SortBar from "@/components/SortBar/SortBar";
 import FilterSidebar from "@/components/FilterSlidebar/FilterSlidebar";
 import { useState } from "react";
 import Header from "@/components/Header/Header";
+import Hero from "@/components/Hero/Hero";
+import Footer from "@/components/Footer/Footer";
 
 export async function getServerSideProps(context) {
-  
-    const { category, sort } = context.query;
+  const { category, sort } = context.query;
 
   const products = await fetchProducts({ category, sort });
 
@@ -28,8 +28,7 @@ export default function ProductsPage({
   selectedCategory,
   selectedSort,
 }) {
-    const [showFilters , setShowFilters] = useState(true);
-
+  const [showFilters, setShowFilters] = useState(true);
 
   return (
     <>
@@ -42,17 +41,19 @@ export default function ProductsPage({
       </Head>
       <main style={{ padding: "2rem" }}>
         <Header></Header>
-      <SortBar
-        totalItems={products.length}
-        showFilters={showFilters}
-        toggleFilters={() => setShowFilters((prev) => !prev)}
-        selectedSort={selectedSort}
-      />
+        <Hero></Hero>
+        <SortBar
+          totalItems={products.length}
+          showFilters={showFilters}
+          toggleFilters={() => setShowFilters((prev) => !prev)}
+          selectedSort={selectedSort}
+        />
         <div className={styles.gridLayout}>
-    {showFilters && <FilterSidebar selectedCategory={selectedCategory} />}
-        <ProductGrid products={products}></ProductGrid>
-         </div>
+          {showFilters && <FilterSidebar selectedCategory={selectedCategory} />}
+          <ProductGrid products={products}></ProductGrid>
+        </div>
       </main>
+      <Footer></Footer>
     </>
   );
 }

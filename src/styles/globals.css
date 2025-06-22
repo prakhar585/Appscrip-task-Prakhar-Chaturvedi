@@ -11,6 +11,8 @@ body {
   font-family: 'Inter', sans-serif;
   background: #fff;
   color: #111;
+   max-width: 100vw;         /* ✅ Prevents elements from overflowing screen width */
+  overflow-x: hidden;
 }
 
 a {

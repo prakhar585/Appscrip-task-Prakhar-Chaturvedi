@@ -1,7 +1,12 @@
-import styles from './SortBar.module.css';
-import { useRouter } from 'next/router';
+import styles from "./SortBar.module.css";
+import { useRouter } from "next/router";
 
-export default function SortBar({ totalItems, showFilters, toggleFilters, selectedSort }) {
+export default function SortBar({
+  totalItems,
+  showFilters,
+  toggleFilters,
+  selectedSort,
+}) {
   const router = useRouter();
 
   const handleSortChange = (e) => {
@@ -14,29 +19,35 @@ export default function SortBar({ totalItems, showFilters, toggleFilters, select
   };
 
   return (
-    <div className={styles.sortBar}>
-      <div className={styles.left}>
-        <button onClick={toggleFilters} className={styles.filterToggle}>
-          {showFilters ? ' < Hide Filters' : ' > Show Filters'}
-        </button>
-        <span className={styles.count}>{totalItems} items</span>
-      </div>
+    <>
+     <hr className={styles.divider} />
+      <div className={styles.sortBar}>
+        <div className={styles.left}>
+          <span className={styles.count}>{totalItems} items</span>
+          <span className={styles.toggleBtn}>{showFilters ? "<": ">"}</span>
+          <button onClick={toggleFilters} className={styles.filterToggle}>
+            {showFilters ? "Hide Filters" : "Show Filters"}
+          </button>
+        </div>
 
-      <div className={styles.sortControl}>
-        <label htmlFor="sortSelect" style={{ display: 'none' }}>Sort by</label>
-        <select
-          id="sortSelect"
-          className={styles.sortSelect}
-          value={selectedSort}
-          onChange={handleSortChange}
-        >
-          <option value="">Recommended</option>
-          <option value="newest">Newest First</option>
-          <option value="popular">Popular</option>
-          <option value="price_desc">Price: High to Low</option>
-          <option value="price_asc">Price: Low to High</option>
-        </select>
+        <div className={styles.sortControl}>
+          <label htmlFor="sortSelect" style={{ display: "none" }}>
+            Sort by
+          </label>
+          <select
+            id="sortSelect"
+            className={styles.sortSelect}
+            value={selectedSort}
+            onChange={handleSortChange}
+          >
+            <option className={styles.filterOptions} value="">Recommended</option>
+            <option className={styles.filterOptions} value="newest">Newest First</option>
+            <option className={styles.filterOptions} value="popular">Popular</option>
+            <option className={styles.filterOptions} value="price_desc">Price: High to Low</option>
+            <option className={styles.filterOptions} value="price_asc">Price: Low to High</option>
+          </select>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

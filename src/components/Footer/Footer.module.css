@@ -1,0 +1,339 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* === Top Section === */
+.topSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 80vw;
+  margin-bottom: 2rem;
+}
+
+.subscribe h4,
+.contactCurrency h4 {
+
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.subscribe{
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.contactCurrency{
+  /* width: 36vw; */
+}
+
+
+
+.subscribe p {
+  margin-bottom: 1rem;
+}
+
+.subscribeForm {
+  display: flex;
+  max-width: 400px;
+  gap: 0.5rem;
+}
+
+.subscribeForm input {
+  flex: 1;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.subscribeForm button {
+  padding: 0.6rem 1rem;
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #444;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.contactCurrency p {
+  margin: 0.3rem 0;
+}
+
+.currency {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #444;
+  margin: 1.5rem 0;
+}
+
+/* === Bottom Section === */
+.bottomSection {
+  display: flex;
+  
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  /* gap: 2rem; */
+  width: 100vw;
+}
+
+.bottomSectionDiv{
+  display: flex;
+  gap:2rem;
+
+}
+
+
+.linksColumn3{
+  width: 40vw;
+  
+}
+
+.linksColumn2{
+  width: 20vw;
+}
+
+.linksColumn1{
+  width: 20vw;
+}
+
+.linksColumn h4 {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  
+}
+
+.linksColumn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linksColumn li {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  
+}
+
+.payments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 51px;
+  height: 30px;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.paymentsGrid{
+  display: flex;
+  gap: 1rem;
+}
+
+#amex{
+  background-color: #006FCF;
+}
+
+#pay{
+  background-color: #5A31F4;
+}
+
+.accordianLogo{
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.copyright {
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+  margin-top: 2rem;
+}
+
+/* === Mobile Responsive === */
+/* @media (max-width: 768px) {
+  .topSection,
+  .bottomSection {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .subscribeForm {
+    flex-direction: column;
+  }
+
+  .subscribeForm input,
+  .subscribeForm button {
+    width: 100%;
+  }
+
+  .bottomSectionDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 100vw;
+  }
+
+  .linksColumn {
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+  }
+
+  .socialIcons {
+    justify-content: flex-start;
+  }
+
+  .payments {
+    justify-content: center;
+  }
+
+  .copyright {
+    font-size: 11px;
+  }
+
+  .linksColumn h4 {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  
+}
+
+  
+.linksColumn3{
+  width: 100%;
+  
+}
+
+.linksColumn2{
+  width: 20vw;
+}
+
+.linksColumn1{
+  width: 20vw;
+}
+
+  .heading {
+    display: flex;
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .footer {
+    padding: 1.5rem;
+  }
+
+  .subscribe h4,
+  .linksColumn h4,
+  .contactCurrency h4 {
+    font-size: 14px;
+  }
+
+  .subscribeForm input {
+    font-size: 13px;
+  }
+
+  .linksColumn li {
+    font-size: 13px;
+  }
+
+  .payments img {
+    width: 36px !important;
+    height: auto !important;
+  }
+} */
+
+@media (max-width: 768px) {
+
+  .topSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 80vw;
+  }
+  
+    .subscribe h4 p{
+      width: 100%;
+    }
+
+  .subscribe{
+    width: 100vw;
+    display: flex;
+    /* justify-content: flex-start; */
+    /* align-items: start; */
+    text-align: left;
+  }
+
+  .bottomSection{
+    display: flex;
+    justify-content: start;
+  }
+
+  .bottomSectionDiv{
+    width: vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 0;
+    gap: 0
+  }
+
+  .bottomSectionDiv h4{
+    width: 100vw;
+    
+  }
+
+  .heading{
+    margin-left: 10px;
+    width: 85vw;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  .divider{
+    /* padding: 0; */
+    width: 80vw;
+    margin: 10px;
+  }
+}
