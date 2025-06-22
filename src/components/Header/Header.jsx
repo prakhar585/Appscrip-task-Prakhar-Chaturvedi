@@ -3,9 +3,9 @@ import styles from "./Header.module.css";
 
 import Logo from "../../../public/assets/images/Logo.png";
 import Search from "../../../public/assets/images/search-normal.png";
-import Heart from "../../../public/assets/images/Heart.png";
+import Heart from "../../../public/assets/images/heart.png";
 import Shopping from "../../../public/assets/images/shopping-bag.png";
-import Profile from "../../../public/assets/images/Profile.png";
+import Profile from "../../../public/assets/images/profile.png";
 
 const Header = () => {
   return (
